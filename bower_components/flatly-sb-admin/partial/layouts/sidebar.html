@@ -1,0 +1,20 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu" sb-sidebar-menus menus-url="/examples/json/menus.json">
+            <li class="sidebar-search">
+                <sb-sidebar-search></sb-sidebar-search>
+            </li>
+            <li ng-repeat="menu in menus">
+                <a href="#{{ menu.route }}">{{ menu.name }}<span class="fa arrow" ng-if="menu.subMenus"></span></a>
+                <ul class="nav nav-second-level" ng-if="menu.subMenus">
+                    <li ng-repeat="subMenu in menu.subMenus">
+                        <a href="#{{ subMenu.route  }}">{{ subMenu.name }}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /#side-menu -->
+    </div>
+    <!-- /.sidebar-collapse -->
+</nav>
+

@@ -1,0 +1,22 @@
+<ul class="dropdown-menu dropdown-alerts">
+    <li ng-repeat-start="alert in alerts">
+        <a href="#">
+            <div>
+                <i class="fa fa-comment fa-fw" ng-class="{
+                    'fa-comment': (alert.type === 'comment'),
+                    'fa-twitter': (alert.type === 'follower'),
+                    'fa-envelope': (alert.type === 'message'),
+                    'fa-upload': (alert.type === 'action')
+                }"></i> {{ alert.content }}
+                <span class="pull-right text-muted small">{{ alert.lastTime }}</span>
+            </div>
+        </a>
+    </li>
+    <li class="divider" ng-repeat-end></li>
+    <li>
+        <a class="text-center" href="#">
+            <strong>See All Alerts</strong>
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </li>
+</ul>

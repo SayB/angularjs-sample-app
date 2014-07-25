@@ -1,0 +1,24 @@
+<ul class="dropdown-menu dropdown-tasks">
+    <li ng-repeat-start="task in tasks">
+        <a href="#">
+            <div>
+                <p>
+                    <strong>{{ task.name }}</strong>
+                    <span class="pull-right text-muted">{{ task.now }}% Complete</span>
+                </p>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-{{ task.status }}" role="progressbar" aria-valuenow="{{ task.now }}" aria-valuemin="{{ task.min }}" aria-valuemax="{{ task.max }}" style="width: {{ task.now }}%">
+                        <span class="sr-only">40% Complete ({{ task.status }})</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="divider" ng-repeat-end></li>
+    <li>
+        <a class="text-center" href="#">
+            <strong>See All Tasks</strong>
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </li>
+</ul>

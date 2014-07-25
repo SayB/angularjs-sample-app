@@ -1,0 +1,20 @@
+<ul class="dropdown-menu dropdown-messages">
+    <li ng-repeat-start="message in messages">
+        <a href="#">
+            <div>
+                <strong>{{ message.name }}</strong>
+                <span class="pull-right text-muted">
+                    <em>{{ message.createdAt }}</em>
+                </span>
+            </div>
+            <div>{{ message.content }}</div>
+        </a>
+    </li>
+    <li class="divider" ng-repeat-end></li>
+    <li>
+        <a class="text-center" href="#">
+            <strong>Read All Messages</strong>
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </li>
+</ul>
